@@ -19,6 +19,9 @@ import com.example.carteira.util.Constantes;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    // Alunos:  Levi Almeida | Mariana Novaes
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
