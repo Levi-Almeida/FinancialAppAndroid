@@ -1,0 +1,171 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LancamentoActivity">
+
+    <View
+        android:id="@+id/viewReport"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/nav"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewReport"
+        app:layout_constraintEnd_toEndOf="@+id/viewReport"
+        app:layout_constraintStart_toStartOf="@+id/viewReport"
+        app:layout_constraintTop_toTopOf="@+id/viewReport" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/lancamento"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="@dimen/menu_w"
+        android:layout_height="@dimen/menu_h"
+        android:layout_marginTop="151dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ivListagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:background="@android:color/transparent"
+                android:src="@drawable/currency" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:background="@android:color/transparent"
+                android:src="@drawable/money_bag_activated" />
+
+            <ImageButton
+                android:id="@+id/ivRelatorio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:background="@android:color/transparent"
+                android:src="@drawable/summarize" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinnerCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/input_h"
+                android:layout_weight=".7"
+                android:background="@drawable/input" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_h"
+                android:layout_weight=".1" />
+
+            <ImageButton
+                android:id="@+id/imageButtonAddCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight=".1"
+                android:backgroundTint="@color/blue"
+                app:srcCompat="@drawable/baseline_add_circle_outline_24" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_h"
+            android:layout_marginTop="@dimen/margin_top_input"
+            android:background="@drawable/input"
+            android:hint="@string/descricao"
+            android:padding="@dimen/padding_input" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_input"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonEntrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/entrada" />
+
+            <RadioButton
+                android:id="@+id/radioButtonSaida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/saida" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editTextValor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_h"
+            android:layout_marginTop="@dimen/margin_top_input"
+            android:background="@drawable/input"
+            android:hint="@string/valor"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/padding_input" />
+
+        <Button
+            android:id="@+id/buttonCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/margin_top_input"
+            android:background="@color/blue"
+            android:text="@string/cadastrar" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resumo Financeiro"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Entradas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_input_add"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/txtEntradas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entradas: R$ 0,00"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Saídas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_delete"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/txtSaidas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saídas: R$ 0,00"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Saldo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_dialog_info"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/txtSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo: R$ 0,00"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

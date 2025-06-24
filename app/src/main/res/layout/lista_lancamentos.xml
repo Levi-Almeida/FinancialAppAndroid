@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="80dp">
+        <TextView
+            android:id="@+id/textViewLancamentoDescricaoLista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewLancamentoCategoriaLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_weight=".3"
+                    android:textSize="14sp"
+                    android:text="ALIMENTAÇÃO" />
+
+                <TextView
+                    android:id="@+id/textViewLancamentoValorLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_weight=".3"
+                    android:textSize="14sp"
+                    android:text="R$ 12.98" />
+
+                <TextView
+                    android:id="@+id/textViewLancamentoDataLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_weight=".3"
+                    android:textSize="14sp"
+                    android:text="30/10/2024" />
+        </LinearLayout>
+</LinearLayout>
